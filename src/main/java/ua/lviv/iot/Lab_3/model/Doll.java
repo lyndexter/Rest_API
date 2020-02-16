@@ -12,6 +12,7 @@ public class Doll extends Toy {
 		super(priceInUAH, ageGroup, size);
 		this.colorOfEyes = colorOfEyes;
 		this.phrase = phrase;
+		super.setTypeOfToy(TypeOfToy.DOLL);
 	}
 
 	public String getColorOfEyes() {

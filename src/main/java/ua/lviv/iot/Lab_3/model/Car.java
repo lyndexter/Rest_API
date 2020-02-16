@@ -5,11 +5,13 @@ public abstract class Car extends Toy {
 	private int doorCount;
 	private int lengthInMM;
 
-	public Car(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM) {
+	public Car(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM,
+			TypeOfToy typeOfToy) {
 		super(priceInUAH, ageGroup, size);
 		this.color = color;
 		this.doorCount = doorCount;
 		this.lengthInMM = lengthInMM;
+		super.setTypeOfToy(typeOfToy);
 	}
 
 	public String getColor() {
