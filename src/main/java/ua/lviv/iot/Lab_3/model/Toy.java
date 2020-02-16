@@ -4,6 +4,7 @@ public abstract class Toy {
 	private double priceInUAH;
 	private int ageGroup;
 	private Size size;
+	private TypeOfToy typeOfToy;
 
 	public Toy(double priceInUAH, int ageGroup, Size size) {
 		this.priceInUAH = priceInUAH;
@@ -33,6 +34,14 @@ public abstract class Toy {
 
 	public void setSize(Size size) {
 		this.size = size;
+	}
+
+	public TypeOfToy getTypeOfToy() {
+		return typeOfToy;
+	}
+
+	public void setTypeOfToy(TypeOfToy typeOfToy) {
+		this.typeOfToy = typeOfToy;
 	}
 
 }

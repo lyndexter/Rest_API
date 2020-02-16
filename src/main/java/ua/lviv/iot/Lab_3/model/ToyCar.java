@@ -5,7 +5,7 @@ public class ToyCar extends Car {
 
 	public ToyCar(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM,
 			String material) {
-		super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM);
+		super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM, TypeOfToy.TOYCAR);
 		this.material = material;
 	}
 

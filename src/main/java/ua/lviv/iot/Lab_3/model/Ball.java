@@ -6,6 +6,7 @@ public class Ball extends Toy {
 	public Ball(double priceInUAH, int ageGroup, Size size, Type type) {
 		super(priceInUAH, ageGroup, size);
 		this.type = type;
+		super.setTypeOfToy(TypeOfToy.BALL);
 	}
 
 	public Type getType() {

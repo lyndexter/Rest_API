@@ -33,17 +33,18 @@ class ToysManagerUnityTest extends BaseToysManagerTest {
 	public void testSortGoodsAgeGroup() {
 		ToysManagerUtils.sortByAgeGroup(toyCars, SortType.ASCENDING);
 		assertEquals(4, toyCars.get(0).getAgeGroup());
-		assertEquals(4, toyCars.get(1).getAgeGroup());
-		assertEquals(5, toyCars.get(2).getAgeGroup());
+		assertEquals(5, toyCars.get(1).getAgeGroup());
+		assertEquals(6, toyCars.get(2).getAgeGroup());
 		assertEquals(6, toyCars.get(3).getAgeGroup());
 	}
 
 	@Test
 	public void testSortGoodsByType() {
-		ToysManagerUtils.sortByType(toyCars, SortType.ASCENDING, TypeOfToy.TOYCAR);
-		assertEquals("class ua.lviv.iot.Lab_3.model.ToyCar", toyCars.get(0).getClass().toString());
-		assertEquals("class ua.lviv.iot.Lab_3.model.ToyCar", toyCars.get(1).getClass().toString());
-		assertEquals("class ua.lviv.iot.Lab_3.model.ToyCar", toyCars.get(2).getClass().toString());
-		assertEquals("class ua.lviv.iot.Lab_3.model.ToyCar", toyCars.get(3).getClass().toString());
+		TypeOfToy typeOfToy = TypeOfToy.TOYCAR;
+		ToysManagerUtils.sortByType(toyCars, SortType.ASCENDING, typeOfToy);
+		assertEquals(typeOfToy, toyCars.get(0).getTypeOfToy());
+		assertEquals(typeOfToy, toyCars.get(1).getTypeOfToy());
+		assertEquals(typeOfToy, toyCars.get(2).getTypeOfToy());
+		assertEquals(typeOfToy, toyCars.get(3).getTypeOfToy());
 	}
 }

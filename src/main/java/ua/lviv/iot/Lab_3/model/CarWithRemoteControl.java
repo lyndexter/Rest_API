@@ -6,7 +6,7 @@ public class CarWithRemoteControl extends Car {
 
 	public CarWithRemoteControl(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM,
 			int batteryCapacityInMah) {
-		super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM);
+		super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM, TypeOfToy.CARWITHREMOUTCONTROL);
 		this.batteryCapacityInMah = batteryCapacityInMah;
 	}
 
