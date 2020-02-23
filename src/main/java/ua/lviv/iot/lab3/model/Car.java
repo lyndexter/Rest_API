@@ -1,4 +1,4 @@
-package ua.lviv.iot.Lab_3.model;
+package ua.lviv.iot.Lab3.model;
 
 public abstract class Car extends Toy {
 	private String color;

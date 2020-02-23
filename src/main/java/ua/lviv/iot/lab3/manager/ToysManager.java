@@ -1,11 +1,11 @@
-package ua.lviv.iot.Lab_3.manager;
+package ua.lviv.iot.Lab3.manager;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import ua.lviv.iot.Lab_3.model.Size;
-import ua.lviv.iot.Lab_3.model.Toy;
+import ua.lviv.iot.lab3.model.Size;
+import ua.lviv.iot.lab3.model.Toy;
 
 public class ToysManager {
 	private List<Toy> toys = new LinkedList<>();

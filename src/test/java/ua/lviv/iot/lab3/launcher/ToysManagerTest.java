@@ -1,4 +1,4 @@
-package ua.lviv.iot.Lab_3.launcher;
+package ua.lviv.iot.Lab3.launcher;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,9 +7,9 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ua.lviv.iot.Lab_3.manager.ToysManager;
-import ua.lviv.iot.Lab_3.model.Size;
-import ua.lviv.iot.Lab_3.model.Toy;
+import ua.lviv.iot.lab3.manager.ToysManager;
+import ua.lviv.iot.lab3.model.Size;
+import ua.lviv.iot.lab3.model.Toy;
 
 class ToysManagerTest extends BaseToysManagerTest {
 
@@ -24,7 +24,7 @@ class ToysManagerTest extends BaseToysManagerTest {
 	@Test
 	public void testFindBySize() {
 		List<Toy> result = toysManager.findBy(Size.SMALL);
-		assertEquals(3, result.size());
+		assertEquals(4, result.size());
 	}
 
 	@Test
