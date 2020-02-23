@@ -1,15 +1,15 @@
-package ua.lviv.iot.Lab_3.launcher;
+package ua.lviv.iot.Lab3.launcher;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 
-import ua.lviv.iot.Lab_3.model.Ball;
-import ua.lviv.iot.Lab_3.model.Size;
-import ua.lviv.iot.Lab_3.model.Toy;
-import ua.lviv.iot.Lab_3.model.ToyCar;
-import ua.lviv.iot.Lab_3.model.Type;
+import ua.lviv.iot.lab3.model.Ball;
+import ua.lviv.iot.lab3.model.Size;
+import ua.lviv.iot.lab3.model.Toy;
+import ua.lviv.iot.lab3.model.ToyCar;
+import ua.lviv.iot.lab3.model.Type;
 
 class BaseToysManagerTest {
 	protected List<Toy> toyCars;

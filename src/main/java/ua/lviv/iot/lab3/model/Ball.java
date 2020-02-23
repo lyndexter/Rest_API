@@ -1,9 +1,9 @@
-package ua.lviv.iot.Lab_3.model;
+package ua.lviv.iot.Lab3.model;
 
 public class Ball extends Toy {
 	private Type type;
 
-	public Ball(double priceInUAH, int ageGroup, Size size, Type type) {
+	public Ball(final double priceInUAH, final int ageGroup, final Size size, final Type type) {
 		super(priceInUAH, ageGroup, size);
 		this.type = type;
 		super.setTypeOfToy(TypeOfToy.BALL);
@@ -13,7 +13,7 @@ public class Ball extends Toy {
 		return type;
 	}
 
-	public void setType(Type type) {
+	public void setType(final Type type) {
 		this.type = type;
 	}
 

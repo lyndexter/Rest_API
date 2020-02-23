@@ -1,4 +1,4 @@
-package ua.lviv.iot.Lab_3.model;
+package ua.lviv.iot.Lab3.model;
 
 public class ToyCar extends Car {
 	private String material;
