@@ -1,5 +1,5 @@
-package ua.lviv.iot.Lab3.model;
+package ua.lviv.iot.lab3.model;
 
 public enum Type {
-	FOOTBALL, BASKETBALL, VOLLEYBALL
+    FOOTBALL, BASKETBALL, VOLLEYBALL
 }

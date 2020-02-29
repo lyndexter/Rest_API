@@ -1,41 +1,49 @@
-package ua.lviv.iot.Lab3.model;
+package ua.lviv.iot.lab3.model;
 
 public abstract class Car extends Toy {
-	private String color;
-	private int doorCount;
-	private int lengthInMM;
+    private String color;
+    private int doorCount;
+    private int lengthInMM;
 
-	public Car(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM,
-			TypeOfToy typeOfToy) {
-		super(priceInUAH, ageGroup, size);
-		this.color = color;
-		this.doorCount = doorCount;
-		this.lengthInMM = lengthInMM;
-		super.setTypeOfToy(typeOfToy);
-	}
+    public Car(double priceInUAH, int ageGroup, Size size, String color, int doorCount,
+            int lengthInMM, TypeOfToy typeOfToy) {
+        super(priceInUAH, ageGroup, size);
+        this.color = color;
+        this.doorCount = doorCount;
+        this.lengthInMM = lengthInMM;
+        super.setTypeOfToy(typeOfToy);
+    }
 
-	public String getColor() {
-		return color;
-	}
+    public String getHeaders() {
+        return super.getHeaders() + "," + "color" + "," + "doorCount" + "," + "lengthInMM";
+    }
 
-	public void setColor(String color) {
-		this.color = color;
-	}
+    public String toCSV() {
+        return super.toCSV() + "," + getColor() + "," + getDoorCount() + "," + getLengthInMM();
+    }
 
-	public int getDoorCount() {
-		return doorCount;
-	}
+    public String getColor() {
+        return color;
+    }
 
-	public void setDoorCount(int doorCount) {
-		this.doorCount = doorCount;
-	}
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-	public int getLengthInMM() {
-		return lengthInMM;
-	}
+    public int getDoorCount() {
+        return doorCount;
+    }
 
-	public void setLengthInMM(int lengthInMM) {
-		this.lengthInMM = lengthInMM;
-	}
+    public void setDoorCount(int doorCount) {
+        this.doorCount = doorCount;
+    }
+
+    public int getLengthInMM() {
+        return lengthInMM;
+    }
+
+    public void setLengthInMM(int lengthInMM) {
+        this.lengthInMM = lengthInMM;
+    }
 
 }

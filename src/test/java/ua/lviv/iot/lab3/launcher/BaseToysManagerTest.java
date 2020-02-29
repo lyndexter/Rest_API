@@ -1,4 +1,4 @@
-package ua.lviv.iot.Lab3.launcher;
+package ua.lviv.iot.lab3.launcher;
 
 import java.util.LinkedList;
 import java.util.List;

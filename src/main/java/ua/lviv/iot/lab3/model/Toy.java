@@ -1,47 +1,55 @@
-package ua.lviv.iot.Lab3.model;
+package ua.lviv.iot.lab3.model;
 
 public abstract class Toy {
-	private double priceInUAH;
-	private int ageGroup;
-	private Size size;
-	private TypeOfToy typeOfToy;
+    private double priceInUAH;
+    private int ageGroup;
+    private Size size;
+    private TypeOfToy typeOfToy;
 
-	public Toy(double priceInUAH, int ageGroup, Size size) {
-		this.priceInUAH = priceInUAH;
-		this.ageGroup = ageGroup;
-		this.size = size;
-	}
+    public Toy(double priceInUAH, int ageGroup, Size size) {
+        this.priceInUAH = priceInUAH;
+        this.ageGroup = ageGroup;
+        this.size = size;
+    }
 
-	public double getPriceInUAH() {
-		return priceInUAH;
-	}
+    public String getHeaders() {
+        return "priceInUAH" + "," + "ageGroup" + "," + "size" + "," + "typeOfToy";
+    }
 
-	public void setPriceInUAH(double priceInUAH) {
-		this.priceInUAH = priceInUAH;
-	}
+    public String toCSV() {
+        return getPriceInUAH() + "," + getAgeGroup() + "," + getSize() + "," + getTypeOfToy();
+    }
 
-	public int getAgeGroup() {
-		return ageGroup;
-	}
+    public double getPriceInUAH() {
+        return priceInUAH;
+    }
 
-	public void setAgeGroup(int ageGroup) {
-		this.ageGroup = ageGroup;
-	}
+    public void setPriceInUAH(double priceInUAH) {
+        this.priceInUAH = priceInUAH;
+    }
 
-	public Size getSize() {
-		return size;
-	}
+    public int getAgeGroup() {
+        return ageGroup;
+    }
 
-	public void setSize(Size size) {
-		this.size = size;
-	}
+    public void setAgeGroup(int ageGroup) {
+        this.ageGroup = ageGroup;
+    }
 
-	public TypeOfToy getTypeOfToy() {
-		return typeOfToy;
-	}
+    public Size getSize() {
+        return size;
+    }
 
-	public void setTypeOfToy(TypeOfToy typeOfToy) {
-		this.typeOfToy = typeOfToy;
-	}
+    public void setSize(Size size) {
+        this.size = size;
+    }
+
+    public TypeOfToy getTypeOfToy() {
+        return typeOfToy;
+    }
+
+    public void setTypeOfToy(TypeOfToy typeOfToy) {
+        this.typeOfToy = typeOfToy;
+    }
 
 }
