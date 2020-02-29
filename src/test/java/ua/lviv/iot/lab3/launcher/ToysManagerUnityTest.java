@@ -1,4 +1,4 @@
-package ua.lviv.iot.Lab3.launcher;
+package ua.lviv.iot.lab3.launcher;
 
 import static org.junit.jupiter.api.Assertions.*;
 

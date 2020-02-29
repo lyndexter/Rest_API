@@ -1,21 +1,30 @@
-package ua.lviv.iot.Lab3.model;
+package ua.lviv.iot.lab3.model;
 
 public class CarWithRemoteControl extends Car {
 
-	private int batteryCapacityInMah;
+    private int batteryCapacityInMah;
 
-	public CarWithRemoteControl(double priceInUAH, int ageGroup, Size size, String color, int doorCount, int lengthInMM,
-			int batteryCapacityInMah) {
-		super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM, TypeOfToy.CARWITHREMOUTCONTROL);
-		this.batteryCapacityInMah = batteryCapacityInMah;
-	}
+    public CarWithRemoteControl(double priceInUAH, int ageGroup, Size size, String color,
+            int doorCount, int lengthInMM, int batteryCapacityInMah) {
+        super(priceInUAH, ageGroup, size, color, doorCount, lengthInMM,
+                TypeOfToy.CARWITHREMOUTCONTROL);
+        this.batteryCapacityInMah = batteryCapacityInMah;
+    }
 
-	public int getBatteryCapacityInMah() {
-		return batteryCapacityInMah;
-	}
+    public String getHeaders() {
+        return super.getHeaders() + "," + "batteryCapacityInMah";
+    }
 
-	public void setBatteryCapacityInMah(int batteryCapacityInMah) {
-		this.batteryCapacityInMah = batteryCapacityInMah;
-	}
+    public String toCSV() {
+        return super.toCSV() + "," + getBatteryCapacityInMah();
+    }
+
+    public int getBatteryCapacityInMah() {
+        return batteryCapacityInMah;
+    }
+
+    public void setBatteryCapacityInMah(int batteryCapacityInMah) {
+        this.batteryCapacityInMah = batteryCapacityInMah;
+    }
 
 }
