@@ -14,8 +14,8 @@ public class ToyWriter {
 
     public void writeToFile(List<Toy> toys) throws IOException {
         for (Toy toy : toys) {
-            textWriter.write(toy.getHeaders() + "," + toy.toCSV());
-            textWriter.write("\n");
+            textWriter.write(toy.getHeaders() + "\n");
+            textWriter.write(toy.toCSV() + "\n");
         }
         textWriter.flush();
     }

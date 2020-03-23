@@ -25,4 +25,9 @@ public class ToyCar extends Car {
         this.material = material;
     }
 
+    public ToyCar() {
+        super(0, 0, null, null, 0, 0, null);
+        this.material = null;
+    }
+
 }
