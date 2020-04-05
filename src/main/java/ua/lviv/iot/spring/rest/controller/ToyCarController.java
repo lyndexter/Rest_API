@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +33,7 @@ public class ToyCarController {
 
     @GetMapping(path = "/{id}")
     public Toy getToyCar(@PathVariable("id") Integer toyCarId) {
-        return toys.get(toyCarId);
+        return toyCarService.find(toyCarId);
     }
 
     @PostMapping
@@ -43,19 +42,14 @@ public class ToyCarController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<Toy> deleteToyCar(@PathVariable("id") Integer toyId) {
-        HttpStatus status = toys.remove(toyId) == null ? HttpStatus.NOT_FOUND : HttpStatus.OK;
-        return ResponseEntity.status(status).build();
+    public ResponseEntity<Toy> deleteToyCar(@PathVariable("id") Integer toyCarId) {
+        return ResponseEntity.status(toyCarService.deleteToyCar(toyCarId)).build();
 
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Toy> updateToyCar(@PathVariable("id") Integer toyId,
-            @RequestBody ToyCar toy) {
-        toy.setId(toyId);
-        HttpStatus status = toys.replace(toyId, toy) == null ? HttpStatus.NOT_FOUND
-                : HttpStatus.CREATED;
-        return ResponseEntity.status(status).build();
-
+    public ResponseEntity<Toy> updateToyCar(@PathVariable("id") Integer toyCarId,
+            @RequestBody ToyCar toyCar) {
+        return ResponseEntity.status(toyCarService.updateToyCar(toyCarId, toyCar)).build();
     }
 }
