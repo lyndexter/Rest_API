@@ -1,0 +1,10 @@
+priceInUAH,ageGroup,size,typeOfToy,color,doorCount,lengthInMM,material
+400.0,6,SMALL,TOYCAR,yellow,4,150,Metal
+priceInUAH,ageGroup,size,typeOfToy,color,doorCount,lengthInMM,material
+3000.0,6,LARGE,TOYCAR,red,4,1000,Aluminium
+priceInUAH,ageGroup,size,typeOfToy,color,doorCount,lengthInMM,material
+300.0,4,SMALL,TOYCAR,green,2,150,Plastic
+priceInUAH,ageGroup,size,typeOfToy,color,doorCount,lengthInMM,material
+320.0,5,SMALL,TOYCAR,blue,2,150,Plastic
+priceInUAH,ageGroup,size,typeOfToy,type
+14000.0,7,SMALL,BALL,FOOTBALL
