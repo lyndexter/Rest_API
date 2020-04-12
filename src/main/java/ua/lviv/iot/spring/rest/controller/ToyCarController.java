@@ -15,7 +15,7 @@ import ua.lviv.iot.spring.business.ToyCarService;
 import ua.lviv.iot.spring.rest.model.Toy;
 import ua.lviv.iot.spring.rest.model.ToyCar;
 
-@RequestMapping("/toyCar")
+@RequestMapping("/toyCars")
 @RestController
 public class ToyCarController {
 
