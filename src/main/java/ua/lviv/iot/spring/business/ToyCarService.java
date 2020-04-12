@@ -33,10 +33,14 @@ public class ToyCarService {
     }
 
     public HttpStatus updateToyCar(Integer toyCarId, ToyCar toyCar) {
+        HttpStatus status;
         toyCar.setId(toyCarId);
-        toyCarRepository.save(toyCar);
-        HttpStatus status = toyCarRepository.existsById(toyCarId) == false ? HttpStatus.NOT_FOUND
-                : HttpStatus.CREATED;
+        if (toyCarRepository.existsById(toyCarId)) {
+            status = HttpStatus.CREATED;
+            toyCarRepository.save(toyCar);
+        } else {
+            status = HttpStatus.NOT_FOUND;
+        }
         return status;
     }
 

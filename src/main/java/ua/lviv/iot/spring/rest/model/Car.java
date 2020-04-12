@@ -1,9 +1,12 @@
 package ua.lviv.iot.spring.rest.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public abstract class Car extends Toy {
     private String color;
-    private int doorCount;
-    private int lengthInMM;
+    private Integer doorCount;
+    private Integer lengthInMM;
 
     public Car(double priceInUAH, int ageGroup, Size size, String color, int doorCount,
             int lengthInMM, TypeOfToy typeOfToy) {
@@ -30,7 +33,7 @@ public abstract class Car extends Toy {
         this.color = color;
     }
 
-    public int getDoorCount() {
+    public Integer getDoorCount() {
         return doorCount;
     }
 
@@ -38,7 +41,7 @@ public abstract class Car extends Toy {
         this.doorCount = doorCount;
     }
 
-    public int getLengthInMM() {
+    public Integer getLengthInMM() {
         return lengthInMM;
     }
 
