@@ -1,5 +1,8 @@
-package ua.lviv.iot.lab3.model;
+package ua.lviv.iot.spring.rest.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class ToyCar extends Car {
     private String material;
 

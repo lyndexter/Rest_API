@@ -1,9 +1,9 @@
-package ua.lviv.iot.lab3.writter;
+package ua.lviv.iot.spring.rest.writter;
 
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
-import ua.lviv.iot.lab3.model.Toy;
+import ua.lviv.iot.spring.rest.model.Toy;
 
 public class ToyWriter {
     private Writer textWriter;
