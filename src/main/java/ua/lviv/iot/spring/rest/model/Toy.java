@@ -34,7 +34,7 @@ public abstract class Toy {
     private Set<Shop> shops;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     public Toy(double priceInUAH, int ageGroup, Size size) {
@@ -112,12 +112,12 @@ public abstract class Toy {
         final int prime = 31;
         int result = 1;
         result = prime * result + ageGroup;
-        result = prime * result + ((child == null) ? 0 : child.hashCode());
+//        result = prime * result + ((child == null) ? 0 : child.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         long temp;
         temp = Double.doubleToLongBits(priceInUAH);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + ((shops == null) ? 0 : shops.hashCode());
+//        result = prime * result + ((shops == null) ? 0 : shops.hashCode());
         result = prime * result + ((size == null) ? 0 : size.hashCode());
         result = prime * result + ((typeOfToy == null) ? 0 : typeOfToy.hashCode());
         return result;
